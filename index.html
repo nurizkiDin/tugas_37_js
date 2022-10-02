@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Belajar Javascript - NIOMIC</title>
+    </head>
+    <body>
+        <button type="button" onclick="tombol()" name="button">Jalankan</button>
+        <br />
+        <br />
+        <hr />
+        Atribut <b>getNamedItem()</b> :
+        <p id="isiItem">contoh</p>
+        <hr />
+        Atribut <b>name()</b> :
+        <p id="item">contoh</p>
+        <hr />
+        Atribut <b>length()</b> :
+        <p id="panjangItem">contoh</p>
+        <hr />
+        
+        <script type="text/javascript">
+            function tombol(){
+                var panggil = document.getElementsByTagName('button')[0]
+
+                let x = panggil.attributes.getNamedItem('onclick').value
+                let y = panggil.attributes.item(0).name
+                let z = panggil.attributes.length
+
+                let p1 = document.getElementById('isiItem').innerHTML = x
+                let p2 = document.getElementById('item').innerHTML = y
+                let p3 = document.getElementById('panjangItem').innerHTML = z
+            }
+        </script>
+    </body>
+</html>
